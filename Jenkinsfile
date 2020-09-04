@@ -1,5 +1,9 @@
 pipeline {
-    agent any
+    agent any 
+    parameters {
+        string(name: 'Env', defaultValue: 'dev', description: 'Mention Branch name here?')
+    }
+    
     stages {
         stage('build') {
             steps {
